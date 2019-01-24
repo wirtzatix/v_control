@@ -44,3 +44,8 @@ mod 'v_profile_docker',
 mod 'v_profile_selinux',
   :git => 'https://github.com/wirtzatix/v_profile_selinux.git',
   :ref => 'prod'
+
+mod 'v_hiera_admin',
+  :git          => 'https://github.com/wirtzatix/v_hiera_base.git',
+  :ref          => 'prod'
+  :install_path => 'data'
