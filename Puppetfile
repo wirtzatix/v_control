@@ -45,7 +45,7 @@ mod 'v_profile_selinux',
   :git => 'https://github.com/wirtzatix/v_profile_selinux.git',
   :ref => 'prod'
 
-mod 'v_hiera_admin',
+mod 'data',
   :git          => 'https://github.com/wirtzatix/v_hiera_admin.git',
   :ref          => 'prod',
-  :install_path => 'data'
+  :install_path => '.'
