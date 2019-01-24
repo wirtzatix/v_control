@@ -49,3 +49,23 @@ mod 'data',
   :git          => 'https://github.com/wirtzatix/v_hiera_admin.git',
   :ref          => 'prod',
   :install_path => '.'
+
+mod 'base',
+  :git          => 'https://github.com/wirtzatix/v_hiera_base.git',
+  :ref          => 'prod',
+  :install_path => 'data'
+
+mod 'apache',
+  :git          => 'https://github.com/wirtzatix/v_hiera_apache.git',
+  :ref          => 'prod',
+  :install_path => 'data'
+
+mod 'docker',
+  :git          => 'https://github.com/wirtzatix/v_hiera_docker.git',
+  :ref          => 'prod',
+  :install_path => 'data'
+
+mod 'selinux',
+  :git          => 'https://github.com/wirtzatix/v_hiera_selinux.git',
+  :ref          => 'prod',
+  :install_path => 'data'
