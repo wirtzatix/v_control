@@ -2,22 +2,17 @@
 version: 5
 
 defaults:
-  datadir: "data"
+  datadir: "/etc/puppetlabs/code/environments/prod/data"
+  data_hash: yaml_data
 
 hierarchy:
-  - name: 'Yaml backend'
-    data_hash: yaml_data
-    paths:
-      - "admin/node/%{trusted.certname}.yaml"
-      - 'admin/admin.yaml'
-      - "apps/%{app1}/node/%{trusted.certname}.yaml"
-        "apps/%{app2}/node/%{trusted.certname}.yaml"
-        "apps/%{app3}/node/%{trusted.certname}.yaml"
-        "apps/%{app4}/node/%{trusted.certname}.yaml"
-        "apps/%{app5}/node/%{trusted.certname}.yaml"
-      - "apps/%{app1}/common.yaml"
-        "apps/%{app2}/common.yaml"
-        "apps/%{app3}/common.yaml"
-        "apps/%{app4}/common.yaml"
-        "apps/%{app5}/common.yaml"
-      - 'admin/common.yaml'
+  - name: 'admin-node'
+    path: "admin/node/%{trusted.certname}.yaml"
+  - name: 'admin'
+    path: 'admin/admin.yaml'
+  - name: 'apps-node'
+    glob: "apps/*/node/%{trusted.certname}.yaml"
+  - name: 'apps'
+    glob: "apps/*/common.yaml"
+  - name: 'admin-common'
+    path: 'admin/common.yaml'
