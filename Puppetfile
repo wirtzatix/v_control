@@ -65,7 +65,7 @@ mod 'selinux',
   :ref          => 'prod',
   :install_path => 'data/apps'
 
-mod 'data',
+mod 'admin',
   :git          => 'https://github.com/wirtzatix/v_hiera_admin.git',
   :ref          => 'prod',
-  :install_path => 'data/admin'
+  :install_path => 'data'
